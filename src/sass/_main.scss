@@ -1,0 +1,152 @@
+            * {
+                margin: 0 auto;
+            }
+            
+            li {
+                list-style: none;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+            
+            $width:1226px;
+            $height:1px;
+            // 电视产品 空调产品 冰洗产品 生活家电
+            #tv,
+            #kt,
+            #bingx,
+            #life,
+            #circum {
+                width: $width;
+                margin: 0 auto;
+                padding-top: 40px;
+                // top
+                .top {
+                    width: 100%;
+                    height: $height * 30;
+                    margin-bottom: 20px;
+                    // 标题
+                    .title {
+                        width: 226px;
+                        height: $height * 30;
+                        float: left;
+                        line-height: 30px;
+                        border-left: 4px solid #ca694e;
+                        padding-left: 8px;
+                        h2 {
+                            float: left;
+                        }
+                        span {
+                            float: right;
+                            color: #8a4532;
+                            cursor: pointer;
+                        }
+                    }
+                    // 列表
+                    .list {
+                        >li {
+                            float: right;
+                            >a {
+                                margin-left: 30px;
+                                line-height: 30px;
+                                color: black;
+                                &:hover {
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+                .bot {
+                    width: 100%;
+                    height: $height * 640;
+                    // 大图
+                    .bigimg {
+                        float: left;
+                        width: 226px;
+                        height: $height * 630;
+                    }
+                    // 内容图片
+                    .con-img {
+                        li {
+                            float: left;
+                            transition: .5s;
+                            a {
+                                display: inline-block;
+                                width: 190px;
+                                height: 260px;
+                                margin-bottom: 10px;
+                                padding: 25px;
+                                margin-left: 10px;
+                                text-align: center;
+                                background: white;
+                                img {
+                                    width: 160px;
+                                    height: 160px;
+                                }
+                                p {
+                                    margin-top: 10px;
+                                    color: black;
+                                    &:nth-child(3) {
+                                        color: #999;
+                                        font-size: 12px;
+                                    }
+                                    &:nth-child(4) {
+                                        color: red;
+                                    }
+                                }
+                            }
+                        }
+                        li:hover {
+                            box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+                            transform: translateY(-3px);
+                        }
+                    }
+                }
+            }
+            
+            // 周边产品
+            #circum {
+                .bot {
+                    width: 100%;
+                    height: 310px;
+                    // 大图
+                    .bigimg {
+                        float: left;
+                        width: 226px;
+                        height: 310px;
+                        background: salmon;
+                    }
+                }
+            }
+            
+            // 侧边栏 左
+            #article-le {
+                position: fixed;
+                top: 25%;
+                left: 476px;
+                li {
+                    width: 45px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                }
+                a {
+                    display: block;
+                    font-size: 14px;
+                    color: #666;
+                    border-bottom: 1px solid #d6d6d6;
+                }
+            }
+            
+            // 侧边栏 右
+            #article-ri {
+                position: fixed;
+                bottom: 20%;
+                right: 0;
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }

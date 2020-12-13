@@ -1,0 +1,105 @@
+// 顶部
+@import "header";
+// footer
+@import "footer";
+$p:100px;
+$width:316px;
+$height:36px;
+body {
+    background: #eee;
+}
+
+#nav {
+    height: 78px;
+    width: 100%;
+    box-shadow: 0px 3px 3px 0px #e1e1e1;
+    div {
+        width: 1226px;
+        margin: 0 auto;
+        img {
+            float: left;
+        }
+        p {
+            color: #333333;
+            margin-top: 26px;
+            line-height: 26px;
+            height: 26px;
+            margin-left: -16px;
+            border-left: 2px solid rgb(221, 221, 221);
+            padding-left: 15px;
+            float: left;
+            font-size: 22px;
+        }
+    }
+}
+
+// 表单验证
+#box {
+    width: 100%;
+    .content {
+        width: 450px;
+        margin: 80px auto;
+        div {
+            p {
+                width: $p;
+                height: $height;
+                float: left;
+                text-align: right;
+                line-height: $height;
+            }
+            >input {
+                width: $width;
+                height: $height;
+                margin-left: 10px;
+                outline: none;
+                padding-left: 5px;
+                border: 1px solid #ccc;
+            }
+            span {
+                height: 40px;
+                line-height: 30px;
+                margin-left: 109px;
+                display: block;
+                font-size: 14px;
+                color: #989898;
+            }
+        }
+        // checkbox
+        article {
+            margin-left: 109px;
+            margin-bottom: 40px;
+            #checkbox {
+                float: left;
+                margin-top: 3px;
+            }
+            i {
+                font-style: normal;
+                display: block;
+                color: #989898;
+                font-size: 14px;
+                float: left;
+                a {
+                    color: red;
+                }
+            }
+        }
+        button {
+            width: 320px;
+            text-align: center;
+            background: #f12020;
+            height: 44px;
+            line-height: 44px;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            margin-left: 109px;
+        }
+        .a {
+            display: block;
+            color: red;
+            margin-left: 204px;
+            margin-top: 20px;
+        }
+    }
+}

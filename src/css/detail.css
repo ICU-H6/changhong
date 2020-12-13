@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+#header > .top {
+  height: 35px;
+  width: 100%;
+  background-color: #333333;
+}
+#header > .top .content {
+  width: 1226px;
+  height: 100%;
+  margin: 0 auto;
+}
+#header > .top .content .left {
+  float: left;
+}
+#header > .top .content .left li {
+  float: left;
+  text-align: center;
+  font-size: 13px;
+  line-height: 35px;
+}
+#header > .top .content .left li a {
+  display: inline-block;
+  height: 35px;
+  width: 145px;
+  color: #ffffff;
+}
+#header > .top .content .left li a img {
+  position: relative;
+  top: 2px;
+  right: 2px;
+}
+#header > .top .content .left li:nth-child(1) {
+  background: #555555;
+}
+#header > .top .content .left li:hover {
+  background: #555555;
+}
+#header > .top .content .dl {
+  float: left;
+  margin-left: 50px;
+  margin-right: 10px;
+}
+#header > .top .content .dl a {
+  display: inline-block;
+  font-size: 13px;
+  color: #ffffff;
+  border-right: 1px solid #ccc;
+  padding: 0 20px;
+  margin-top: 9px;
+}
+#header > .top .content .dl a:hover {
+  color: #ff6700;
+}
+#header > .top .content .right li {
+  float: left;
+  text-align: center;
+  width: 120px;
+  font-size: 13px;
+  line-height: 35px;
+  position: relative;
+  cursor: pointer;
+}
+#header > .top .content .right li > .iconfont {
+  font-size: 16px;
+  color: white;
+  margin-right: 8px;
+}
+#header > .top .content .right li > a {
+  display: inline-block;
+  height: 35px;
+  color: #ffffff;
+}
+#header > .top .content .right li:hover {
+  background: #555555;
+}
+#header > .top .content .right .hover1 .rentou {
+  display: none;
+  width: 240px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: 35px;
+  border: 1px solid #ccc;
+  background: white;
+  z-index: 9;
+}
+#header > .top .content .right .hover1 .rentou .top {
+  padding-top: 18px;
+  padding-left: 25px;
+  overflow: hidden;
+}
+#header > .top .content .right .hover1 .rentou .top img {
+  float: left;
+  vertical-align: middle;
+}
+#header > .top .content .right .hover1 .rentou .top a {
+  color: blue;
+  font-size: 16px;
+  margin-left: -20px;
+  cursor: pointer;
+}
+#header > .top .content .right .hover1 .rentou .top a:nth-child(3) {
+  font-size: 14px;
+}
+#header > .top .content .right .hover1 .rentou .top a:hover {
+  color: #ff6700;
+}
+#header > .top .content .right .hover1 .rentou .bot {
+  padding: 0px 16px 0px 25px;
+  line-height: 30px;
+  float: left;
+  margin-top: 5px;
+}
+#header > .top .content .right .hover1 .rentou .bot a {
+  color: black;
+  float: left;
+}
+#header > .top .content .right .hover1 .rentou .bot a:hover {
+  color: red;
+}
+#header > .top .content .right .hover1 .rentou .bot span {
+  float: left;
+  font-size: 12px;
+  color: #cfcfcf;
+  margin: 0px 30px;
+}
+#header > .top .content .right .hover2 img {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 35px;
+  left: 0;
+  display: none;
+  z-index: 9;
+}
+#header > .top .content .right .gw {
+  display: none;
+  width: 315px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  color: #aaa;
+  background: white;
+}
+#header > .top .content .right .hover1:hover .rentou,
+#header > .top .content .right .hover2:hover img,
+#header > .top .content .right .hover3:hover .gw {
+  display: block;
+}
+#header .nav {
+  width: 1226px;
+  height: 78px;
+  margin: 0 auto;
+  background: white;
+}
+#header .nav > img {
+  float: left;
+  width: 239px;
+}
+#header .nav .list {
+  float: left;
+  background: white;
+  padding-left: 20px;
+}
+#header .nav .list > li {
+  float: left;
+}
+#header .nav .list > li:nth-child(1) a {
+  color: #ff6700;
+}
+#header .nav .list > li a {
+  width: 90px;
+  height: 78px;
+  display: inline-block;
+  line-height: 78px;
+  text-align: center;
+  color: black;
+}
+#header .nav .list > li a:hover {
+  color: #ff6700;
+}
+#header .nav .search {
+  width: 200px;
+  height: 38px;
+  border: 1px solid #ccc;
+  float: right;
+  margin-top: 17px;
+  text-align: center;
+  line-height: 38px;
+}
+#header .nav .search input {
+  border: none;
+  outline: none;
+  margin-left: 5px;
+}
+
+body {
+  background: #fff;
+}
+
+#content {
+  width: 1226px;
+  height: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+#content .bimg {
+  width: 510px;
+  height: 510px;
+  float: left;
+  margin-right: 63px;
+  border: 1px solid #ccc;
+}
+#content .bimg img {
+  width: 510px;
+  height: 510px;
+}
+#content .detail {
+  width: 650px;
+  height: 514px;
+  float: left;
+}
+#content .detail p {
+  height: 90px;
+  line-height: 90px;
+  font-size: 18px;
+  border-bottom: 1px solid #bbb;
+}
+#content .detail span {
+  display: block;
+  height: 90px;
+  line-height: 90px;
+  font-size: 30px;
+  color: red;
+  border-bottom: 1px solid #bbb;
+}
+#content .detail .amount {
+  height: 90px;
+  line-height: 90px;
+  font-size: 18px;
+  margin-top: 20px;
+  border-bottom: 1px solid #bbb;
+}
+#content .detail .amount b {
+  font-weight: normal;
+  font-size: 16px;
+  float: left;
+  margin-right: 10px;
+}
+#content .detail .amount input {
+  float: left;
+  width: 77px;
+  height: 38px;
+  text-align: center;
+  line-height: 40px;
+  border: none;
+  outline: none;
+  margin-top: 22px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#content .detail .amount i {
+  font-style: normal;
+  display: block;
+  float: left;
+  width: 38px;
+  height: 38px;
+  line-height: 34px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-top: 22px;
+  cursor: pointer;
+}
+#content .detail .amount i:hover {
+  border: 1px solid red;
+}
+#content .detail a {
+  display: block;
+  float: left;
+  margin-top: 50px;
+  width: 178px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+}
+#content .detail .buy {
+  background: red;
+  color: whitesmoke;
+}
+#content .detail .shop {
+  margin-left: 13px;
+  background: #fff;
+  border: 1px solid #999;
+  color: #666;
+}
+#content .detail .shop:hover {
+  border: 1px solid red;
+  color: red;
+}
+#content .detail em {
+  font-style: normal;
+  margin-top: 58px;
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+}
+#content .detail em div {
+  position: absolute;
+  top: -245px;
+  display: none;
+}
+#content .detail em div img {
+  width: 230px;
+  height: 230px;
+}
+#content .detail em:hover div {
+  display: block;
+}
+#content .simg {
+  width: 512px;
+  height: 96px;
+  float: left;
+  margin-top: 10px;
+}
+#content .simg ul {
+  float: left;
+  margin-top: 12px;
+}
+#content .simg ul li {
+  float: left;
+  list-style: none;
+  width: 84px;
+  height: 84px;
+  margin-right: 10px;
+}
+#content .simg ul li img {
+  width: 100%;
+  height: 100%;
+}
+#content .simg ul li:last-child {
+  margin-right: 0;
+}
+#content .simg a {
+  display: block;
+  float: left;
+  margin-top: 10px;
+  width: 19px;
+  height: 86px;
+  color: #ccc;
+}
+#content .simg a img {
+  margin-top: 26px;
+  margin-left: 2px;
+}
+#content .fd {
+  display: none;
+  width: 520px;
+  height: 520px;
+  background: aquamarine;
+  position: absolute;
+  top: 132px;
+  left: 710px;
+  z-index: 9;
+}
+
+/*# sourceMappingURL=detail.css.map */

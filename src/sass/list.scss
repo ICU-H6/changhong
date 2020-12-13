@@ -1,0 +1,268 @@
+// 顶部
+@import "header";
+// 底部
+@import "footer";
+input {
+    border: none;
+    outline: none;
+}
+
+body {
+    background: #f9f9f9;
+}
+
+li {
+    list-style: none;
+}
+
+// 主体内容
+#main {
+    width: 1226px;
+    height: 870px;
+    margin: 0 auto;
+    margin-top: 20px;
+    // l左边
+    .left {
+        width: 200px;
+        height: 748px;
+        float: left;
+        p {
+            width: 100%;
+            height: 48px;
+            text-align: center;
+            line-height: 48px;
+            font-size: 16px;
+            color: #333333;
+            background: #f1f1f1;
+        }
+    }
+    // 右边
+    .right {
+        width: 986px;
+        height: 900px;
+        float: left;
+        margin-left: 40px;
+        // nav
+        .nav {
+            width: 100%;
+            height: 48px;
+            background: #f1f1f1;
+            .top {
+                float: left;
+                width: 1000px;
+                >li {
+                    width: 109px;
+                    height: 45px;
+                    text-align: center;
+                    line-height: 45px;
+                    float: left;
+                    border-right: 1px solid #e6e6e6;
+                    cursor: pointer;
+                    &:hover {
+                        color: red;
+                    }
+                }
+                >input {
+                    width: 16px;
+                    height: 16px;
+                    margin-top: 14px;
+                    margin-left: 10px;
+                    float: left;
+                }
+                p {
+                    // width: 70px;
+                    margin-left: 24px;
+                    font-size: 14px;
+                    color: #595959;
+                    line-height: 45px;
+                    float: left;
+                    cursor: pointer;
+                    &:hover {
+                        color: red;
+                    }
+                }
+                // 搜索框
+                .box {
+                    float: right;
+                    width: 248px;
+                    height: 33px;
+                    margin-right: 18px;
+                    margin-top: 7px;
+                    background: white;
+                    border: 1px solid #ccc;
+                    input {
+                        width: 207px;
+                        height: 33px;
+                        padding-left: 10px;
+                    }
+                    &:hover {
+                        border: 1px solid red;
+                    }
+                }
+            }
+            // 渲染
+            ul {
+                >li {
+                    float: left;
+                    width: 236px;
+                    height: 360px;
+                    margin-top: 14px;
+                    margin-right: 14px;
+                    background: white;
+                    &:hover {
+                        box-shadow: 0px 0px 5px 3px #e9e9e9;
+                    }
+                    &:nth-child(4n) {
+                        margin-right: 0;
+                    }
+                    a {
+                        display: block;
+                        // text-align: center;
+                        .img {
+                            width: 190px;
+                            height: 190px;
+                            margin: 15px 25px;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        // 标题
+                        .title {
+                            width: 190px;
+                            height: 86px;
+                            margin: 0 25px;
+                            h2 {
+                                font-size: 16px;
+                                font-weight: normal;
+                                color: black;
+                                cursor: pointer;
+                            }
+                            >p {
+                                font-size: 12px;
+                                margin-top: 10px;
+                                color: #666;
+                                span {
+                                    color: red;
+                                    display: inline-block;
+                                    font-size: 16px;
+                                }
+                                i {
+                                    float: right;
+                                }
+                            }
+                        }
+                        .bot {
+                            width: 213px;
+                            height: 30px;
+                            margin: 2px 13px;
+                            border: 1px solid #ccc;
+                            // bot公用
+                            div {
+                                border-right: 1px solid #ebebeb;
+                                width: 58px;
+                                float: left;
+                                line-height: 30px;
+                                text-align: center;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                >p {
+                                    font-size: 12px;
+                                    color: black;
+                                    margin-left: 5px;
+                                }
+                                &:nth-child(3) {
+                                    border-right: 0;
+                                    width: 94px;
+                                    cursor: pointer;
+                                    &:hover {
+                                        p {
+                                            color: red;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 分页器
+    #sorter {
+        width: 999px;
+        height: 58px;
+        background: white;
+        margin: 0 auto;
+        float: left;
+        margin-top: 20px;
+        .content {
+            width: 355px;
+            height: 24px;
+            margin: 0 auto;
+            margin-top: 17px;
+            // 首页 尾页
+            span {
+                float: left;
+                a {
+                    display: block;
+                    float: left;
+                    padding: 0px 8px;
+                    margin-right: 25px;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #666666;
+                }
+            }
+            // 左右箭头
+            .le {
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 7px solid transparent;
+                border-right: 8px solid #666666;
+                border-bottom: 7px solid transparent;
+                margin: 5px 0px;
+                float: left;
+                margin-right: 16px;
+                cursor: pointer;
+            }
+            .ri {
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 7px solid transparent;
+                border-left: 8px solid #666666;
+                border-bottom: 7px solid transparent;
+                margin: 5px 0px;
+                float: left;
+                margin-right: 25px;
+                cursor: pointer;
+            }
+            // 分页 li
+            li {
+                float: left;
+                a {
+                    display: block;
+                    width: 22px;
+                    height: 22px;
+                    line-height: 24px;
+                    border: 1px solid #cccccc;
+                    color: #333333;
+                    margin-right: 16px;
+                    font-size: 14px;
+                    text-align: center;
+                    &:hover {
+                        background: red;
+                        color: white;
+                    }
+                }
+                &:first-child a {
+                    background: red;
+                    color: white;
+                }
+            }
+        }
+    }
+}

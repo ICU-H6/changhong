@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #f5f6fb;
+    ;
+}
+
+// header
+header {
+    width: 100%;
+    height: 60px;
+    background: white;
+    line-height: 60px;
+    .logo {
+        float: left;
+        width: 146px;
+        height: 26px;
+        margin: 17px 0px 17px 40px;
+    }
+    //   |
+    div {
+        float: left;
+        width: 1px;
+        height: 30px;
+        margin: 15px;
+        background: #c9c9c9;
+    }
+    span {
+        float: left;
+        font-size: 18px;
+    }
+}
+
+//  main
+#main {
+    width: 520px;
+    height: 450px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #e8e8e8;
+    .login {
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        font-size: 20px;
+        cursor: pointer;
+        // 账号
+        .left {
+            float: left;
+            width: 260px;
+            height: 100%;
+        }
+        // 手机
+        .right {
+            float: left;
+            width: 260px;
+            height: 100%;
+            background: #dfe4e8;
+            color: #8e98a0;
+        }
+    }
+    // 输入框
+    // .phone,.password{
+    //     display: none;
+    // }
+    .phone,
+    .password,
+    .shouji,
+    .dx {
+        width: 380px;
+        height: 40px;
+        border: 1px solid #bdbdbd;
+        margin: 0 auto;
+        margin-top: 30px;
+        input {
+            border: none;
+            padding: 0px;
+            margin: 10px 0px;
+            line-height: 20px;
+            outline: none;
+            width: 325px;
+            font-size: 16px
+        }
+        span {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            font-size: 20px;
+            color: #ccc;
+            margin: 5px;
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+    // 短信
+    .dx,
+    .shouji {
+        display: none;
+        b {
+            width: 130px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            display: block;
+            float: right;
+            font-weight: normal;
+            border-left: 1px solid #bdbdbd;
+            cursor: pointer;
+        }
+        input {
+            width: 100px;
+        }
+    }
+    // 登录
+    button {
+        display: block;
+        width: 380px;
+        height: 40px;
+        margin: 30px auto;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background: #1c95f3;
+        color: #ffffff;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    // 注册 忘记密码
+    .btn-bot {
+        float: right;
+        margin-right: 70px;
+        a {
+            color: #19a2e9;
+            font-size: 13px;
+            border-right: 1px solid #19a2e9;
+            padding: 3px;
+        }
+    }
+    // 其他方式
+    .else {
+        position: absolute;
+        bottom: 90px;
+        left: 30px;
+        color: #bdbdbd;
+        span {
+            float: left;
+            height: 1px;
+            width: 180px;
+            background: #e5e9ec;
+            margin: 9px 3px;
+        }
+        i {
+            font-style: normal;
+            float: left;
+        }
+    }
+    ul {
+        width: 380px;
+        margin: 0 auto;
+        margin-top: 112px;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        li {
+            list-style: none;
+            width: 40px;
+            height: 40px;
+        }
+        .iconfont {
+            font-size: 40px;
+        }
+        .iconfont1 {
+            color: #19a2e9;
+            position: absolute;
+            top: -4px;
+        }
+        .iconfont2 {
+            font-size: 45px;
+            color: greenyellow;
+            position: absolute;
+            top: -4px;
+        }
+        .iconfont3 {
+            color: hotpink;
+        }
+        .iconfont4 {
+            color: #19a2e9;
+        }
+    }
+}

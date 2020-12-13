@@ -1,0 +1,237 @@
+$width:1226px;
+$color:#ff6700;
+@mixin border($w:1px, $s:solid, $c:#ccc) {
+    border: $w $s $c;
+}
+
+@mixin border-r($w:1px, $s:solid, $c:#ccc) {
+    border-right: $w $s $c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// 顶部
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+// 头部
+#header {
+    // top
+    >.top {
+        height: 35px;
+        width: 100%;
+        background-color: #333333;
+        // margin 0 auto
+        .content {
+            width: $width;
+            height: 100%;
+            margin: 0 auto;
+            // 左边ul
+            .left {
+                float: left;
+                li {
+                    float: left;
+                    text-align: center;
+                    font-size: 13px;
+                    line-height: 35px;
+                    a {
+                        display: inline-block;
+                        height: 35px;
+                        width: 145px;
+                        color: #ffffff;
+                        img {
+                            position: relative;
+                            top: 2px;
+                            right: 2px;
+                        }
+                    }
+                    &:nth-child(1) {
+                        background: #555555;
+                    }
+                    &:hover {
+                        background: #555555;
+                    }
+                }
+            }
+            // 登录注册 
+            .dl {
+                float: left;
+                margin-left: 50px;
+                margin-right: 10px;
+                a {
+                    display: inline-block;
+                    font-size: 13px;
+                    color: #ffffff;
+                    @include border-r;
+                    padding: 0 20px;
+                    margin-top: 9px;
+                    &:hover {
+                        color: $color;
+                    }
+                }
+            }
+            .right {
+                li {
+                    float: left;
+                    text-align: center;
+                    width: 120px;
+                    font-size: 13px;
+                    line-height: 35px;
+                    position: relative;
+                    cursor: pointer;
+                    >.iconfont {
+                        font-size: 16px;
+                        color: white;
+                        margin-right: 8px;
+                    }
+                    >a {
+                        display: inline-block;
+                        height: 35px;
+                        color: #ffffff;
+                    }
+                    &:hover {
+                        background: #555555;
+                    }
+                }
+                .hover1 {
+                    //  详情
+                    .rentou {
+                        display: none;
+                        width: 240px;
+                        height: 200px;
+                        position: absolute;
+                        left: 0;
+                        top: 35px;
+                        @include border;
+                        background: white;
+                        z-index: 9;
+                        .top {
+                            padding-top: 18px;
+                            padding-left: 25px;
+                            overflow: hidden;
+                            img {
+                                float: left;
+                                vertical-align: middle;
+                            }
+                            a {
+                                color: blue;
+                                font-size: 16px;
+                                margin-left: -20px;
+                                cursor: pointer;
+                                &:nth-child(3) {
+                                    font-size: 14px;
+                                }
+                                &:hover {
+                                    color: $color;
+                                }
+                            }
+                        }
+                        .bot {
+                            padding: 0px 16px 0px 25px;
+                            line-height: 30px;
+                            float: left;
+                            margin-top: 5px;
+                            a {
+                                color: black;
+                                float: left;
+                                &:hover {
+                                    color: red;
+                                }
+                            }
+                            span {
+                                float: left;
+                                font-size: 12px;
+                                color: #cfcfcf;
+                                margin: 0px 30px;
+                            }
+                        }
+                    }
+                }
+                //logo
+                .hover2 img {
+                    position: absolute;
+                    width: 200px;
+                    height: 200px;
+                    top: 35px;
+                    left: 0;
+                    display: none;
+                    z-index: 9;
+                }
+                .gw {
+                    display: none;
+                    width: 315px;
+                    height: 50px;
+                    line-height: 50px;
+                    @include border;
+                    position: absolute;
+                    top: 35px;
+                    right: 0;
+                    color: #aaa;
+                    background: white;
+                }
+                .hover1:hover .rentou,
+                .hover2:hover img,
+                .hover3:hover .gw {
+                    display: block;
+                }
+            }
+        }
+    }
+    // nav
+    .nav {
+        width: $width;
+        height: 78px;
+        margin: 0 auto;
+        background: white;
+        >img {
+            float: left;
+            width: 239px;
+        }
+        // list
+        .list {
+            float: left;
+            background: white;
+            padding-left: 20px;
+            >li {
+                float: left;
+                &:nth-child(1) a {
+                    color: $color;
+                }
+                a {
+                    width: 90px;
+                    height: 78px;
+                    display: inline-block;
+                    line-height: 78px;
+                    text-align: center;
+                    color: black;
+                    &:hover {
+                        color: $color;
+                    }
+                }
+            }
+        }
+        // 搜索框
+        .search {
+            width: 200px;
+            height: 38px;
+            @include border;
+            float: right;
+            margin-top: 17px;
+            text-align: center;
+            line-height: 38px;
+            input {
+                border: none;
+                outline: none;
+                margin-left: 5px;
+            }
+        }
+    }
+}

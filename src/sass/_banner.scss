@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f9f9f9;
+}
+
+$width:1px;
+$height:1px;
+// banner
+#banner {
+    width: $width * 1920;
+    height: $height * 500;
+    margin: 0 auto;
+    position: relative;
+    .banner-ul {
+        width: $width * 1920;
+        height: $height * 500;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        // 切换器
+        .qh {
+            position: absolute;
+            bottom: 30px;
+            right: 300px;
+            a {
+                display: block;
+                float: left;
+                height: $height * 8;
+                width: $width * 8;
+                background: url(../img/dian.png) no-repeat left center;
+                margin-left: 17px;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+        }
+    }
+    >.list {
+        position: absolute;
+        top: 0;
+        left: 340px;
+        >li {
+            width: $width * 226;
+            height: $height * 62;
+            background: rgba($color: #000000, $alpha: .3);
+            cursor: pointer;
+            padding-left: 30px;
+            >img {
+                float: left;
+                width: $width * 57;
+                height: 100%;
+                margin-right: 5px;
+            }
+            >a {
+                text-align: center;
+                line-height: 60px;
+                color: white;
+            }
+            &:hover {
+                background: #ff6700;
+            }
+        }
+    }
+    // 二级列表
+    .list-hover {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 606px;
+        width: $width * 446;
+        height: 500px;
+        background: white;
+    }
+}

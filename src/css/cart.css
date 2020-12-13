@@ -1,0 +1,587 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+#header > .top {
+  height: 35px;
+  width: 100%;
+  background-color: #333333;
+}
+#header > .top .content {
+  width: 1226px;
+  height: 100%;
+  margin: 0 auto;
+}
+#header > .top .content .left {
+  float: left;
+}
+#header > .top .content .left li {
+  float: left;
+  text-align: center;
+  font-size: 13px;
+  line-height: 35px;
+}
+#header > .top .content .left li a {
+  display: inline-block;
+  height: 35px;
+  width: 145px;
+  color: #ffffff;
+}
+#header > .top .content .left li a img {
+  position: relative;
+  top: 2px;
+  right: 2px;
+}
+#header > .top .content .left li:nth-child(1) {
+  background: #555555;
+}
+#header > .top .content .left li:hover {
+  background: #555555;
+}
+#header > .top .content .dl {
+  float: left;
+  margin-left: 50px;
+  margin-right: 10px;
+}
+#header > .top .content .dl a {
+  display: inline-block;
+  font-size: 13px;
+  color: #ffffff;
+  border-right: 1px solid #ccc;
+  padding: 0 20px;
+  margin-top: 9px;
+}
+#header > .top .content .dl a:hover {
+  color: #ff6700;
+}
+#header > .top .content .right li {
+  float: left;
+  text-align: center;
+  width: 120px;
+  font-size: 13px;
+  line-height: 35px;
+  position: relative;
+  cursor: pointer;
+}
+#header > .top .content .right li > .iconfont {
+  font-size: 16px;
+  color: white;
+  margin-right: 8px;
+}
+#header > .top .content .right li > a {
+  display: inline-block;
+  height: 35px;
+  color: #ffffff;
+}
+#header > .top .content .right li:hover {
+  background: #555555;
+}
+#header > .top .content .right .hover1 .rentou {
+  display: none;
+  width: 240px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: 35px;
+  border: 1px solid #ccc;
+  background: white;
+  z-index: 9;
+}
+#header > .top .content .right .hover1 .rentou .top {
+  padding-top: 18px;
+  padding-left: 25px;
+  overflow: hidden;
+}
+#header > .top .content .right .hover1 .rentou .top img {
+  float: left;
+  vertical-align: middle;
+}
+#header > .top .content .right .hover1 .rentou .top a {
+  color: blue;
+  font-size: 16px;
+  margin-left: -20px;
+  cursor: pointer;
+}
+#header > .top .content .right .hover1 .rentou .top a:nth-child(3) {
+  font-size: 14px;
+}
+#header > .top .content .right .hover1 .rentou .top a:hover {
+  color: #ff6700;
+}
+#header > .top .content .right .hover1 .rentou .bot {
+  padding: 0px 16px 0px 25px;
+  line-height: 30px;
+  float: left;
+  margin-top: 5px;
+}
+#header > .top .content .right .hover1 .rentou .bot a {
+  color: black;
+  float: left;
+}
+#header > .top .content .right .hover1 .rentou .bot a:hover {
+  color: red;
+}
+#header > .top .content .right .hover1 .rentou .bot span {
+  float: left;
+  font-size: 12px;
+  color: #cfcfcf;
+  margin: 0px 30px;
+}
+#header > .top .content .right .hover2 img {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 35px;
+  left: 0;
+  display: none;
+  z-index: 9;
+}
+#header > .top .content .right .gw {
+  display: none;
+  width: 315px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  color: #aaa;
+  background: white;
+}
+#header > .top .content .right .hover1:hover .rentou,
+#header > .top .content .right .hover2:hover img,
+#header > .top .content .right .hover3:hover .gw {
+  display: block;
+}
+#header .nav {
+  width: 1226px;
+  height: 78px;
+  margin: 0 auto;
+  background: white;
+}
+#header .nav > img {
+  float: left;
+  width: 239px;
+}
+#header .nav .list {
+  float: left;
+  background: white;
+  padding-left: 20px;
+}
+#header .nav .list > li {
+  float: left;
+}
+#header .nav .list > li:nth-child(1) a {
+  color: #ff6700;
+}
+#header .nav .list > li a {
+  width: 90px;
+  height: 78px;
+  display: inline-block;
+  line-height: 78px;
+  text-align: center;
+  color: black;
+}
+#header .nav .list > li a:hover {
+  color: #ff6700;
+}
+#header .nav .search {
+  width: 200px;
+  height: 38px;
+  border: 1px solid #ccc;
+  float: right;
+  margin-top: 17px;
+  text-align: center;
+  line-height: 38px;
+}
+#header .nav .search input {
+  border: none;
+  outline: none;
+  margin-left: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  font-style: normal;
+}
+
+#footer {
+  width: 100%;
+  background: #efefef;
+  margin-top: 50px;
+}
+#footer .con {
+  width: 1226px;
+  margin: 0 auto;
+  height: 340px;
+}
+#footer .con > .top {
+  padding: 37px 25px 0px;
+  height: 77px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .con > .top > div {
+  float: left;
+  display: flex;
+  width: 182px;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .con > .top > div > div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 11px;
+}
+#footer .con > .top > div > div b {
+  font-size: 17px;
+}
+#footer .con > .top > div > div p {
+  font-size: 14px;
+}
+#footer .con .bot {
+  margin-top: 14px;
+}
+#footer .con .bot .left {
+  float: left;
+  position: relative;
+}
+#footer .con .bot .left div {
+  width: 70px;
+  float: left;
+  margin-left: 40px;
+}
+#footer .con .bot .left div b {
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 18px;
+  font-weight: normal;
+}
+#footer .con .bot .left div a {
+  font-size: 12px;
+  display: block;
+  color: #999;
+  height: 30px;
+  line-height: 30px;
+}
+#footer .con .bot .left div:nth-child(3) {
+  margin-left: 96px;
+}
+#footer .con .bot .left .gang {
+  width: 200px;
+  position: absolute;
+  display: inline-block;
+  border-top: 1px solid #ccc;
+  right: 0;
+  bottom: 14px;
+}
+#footer .con .bot .left > a {
+  position: absolute;
+  bottom: -28px;
+  right: 0;
+  color: #999;
+}
+#footer .con .bot .left a:hover {
+  color: red;
+}
+#footer .con .bot .center {
+  width: 208px;
+  margin-left: 62px;
+  float: left;
+  border-left: 1px solid #ccc;
+  padding-left: 22px;
+  border-right: 1px solid #ccc;
+  padding-left: 40px;
+}
+#footer .con .bot .center .iconfont,
+#footer .con .bot .center i {
+  color: red;
+  margin-left: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+#footer .con .bot .center p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+#footer .con .bot .right {
+  float: left;
+}
+#footer .con .bot .right img {
+  width: 108px;
+  height: 108px;
+  float: left;
+  margin-left: 30px;
+}
+#footer .footer-bot {
+  width: 100%;
+  height: 226px;
+  background: #333333;
+  text-align: center;
+}
+#footer .footer-bot > img {
+  margin: 30px;
+}
+#footer .footer-bot p {
+  color: #999999;
+  margin-bottom: 5px;
+}
+#footer .footer-bot div {
+  width: 1226px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+#footer .footer-bot div li {
+  float: left;
+  margin-left: 102px;
+}
+#footer .footer-bot div li img {
+  width: 26px;
+  height: 31px;
+  float: left;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+#footer .footer-bot div li span {
+  float: left;
+  vertical-align: middle;
+  color: #999999;
+}
+
+#main .liBox .input input, #main .top input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+i,
+li,
+b,
+span,
+em,
+a {
+  font-weight: normal;
+  font-style: normal;
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+#header .nav {
+  width: 100%;
+  height: 78px;
+  background: white;
+  box-shadow: 0px 3px 3px 0px #e1e1e1;
+}
+#header .nav .con {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+#main {
+  width: 1226px;
+  margin: 0 auto;
+}
+#main .top {
+  margin-top: 30px;
+  height: 20px;
+}
+#main .top input {
+  float: left;
+}
+#main .top p {
+  float: left;
+  margin-left: 30px;
+}
+#main .top p span {
+  color: red;
+  margin: 0 3px;
+}
+#main .liBox {
+  width: 1226px;
+  height: 130px;
+  background: white;
+  margin-top: 30px;
+}
+#main .liBox .input {
+  width: 50px;
+  height: 130px;
+  border-right: 1px solid #f7f7f7;
+  float: left;
+}
+#main .liBox .input input {
+  margin-top: 44px;
+}
+#main .liBox .details {
+  float: left;
+}
+#main .liBox .details > img {
+  float: left;
+  width: 125px;
+  height: 125px;
+  margin-left: 13px;
+}
+#main .liBox .details .title {
+  float: left;
+  line-height: 130px;
+  margin-left: 10px;
+}
+#main .liBox .details .price {
+  margin-left: 30px;
+  float: left;
+  line-height: 130px;
+}
+#main .liBox .details .price b {
+  color: red;
+  margin: 0 22px;
+  font-size: 18px;
+}
+#main .liBox .details article {
+  float: left;
+  line-height: 130px;
+  margin-left: 40px;
+}
+#main .liBox .details article i {
+  margin-right: 20px;
+}
+#main .liBox .details article em {
+  width: 47px;
+  height: 33px;
+  text-align: center;
+  line-height: 33px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+#main .liBox .details article em:hover {
+  border: 1px solid red;
+}
+#main .liBox .details article input {
+  width: 78px;
+  height: 33px;
+  line-height: 33px;
+  border: 1px solid #cccccc;
+  outline: none;
+  color: #000;
+  font-size: 16px;
+  text-align: center;
+}
+#main .liBox .details .inventory {
+  float: left;
+  line-height: 130px;
+  margin-left: 60px;
+}
+#main .liBox .details .delete {
+  float: left;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  margin-left: 60px;
+  margin-top: 10px;
+  font-size: 28px;
+  color: #ccc;
+  text-align: center;
+  line-height: 24px;
+}
+#main .liBox .details .delete:hover {
+  border: 1px solid red;
+  color: red;
+}
+
+#total {
+  width: 100%;
+  height: 102px;
+  background: #313131;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  border-top: 3px solid white;
+}
+#total .box {
+  width: 1226px;
+  height: 100%;
+  margin: 0 auto;
+}
+#total .box .le {
+  float: left;
+}
+#total .box .le li {
+  color: white;
+  float: left;
+  list-style: none;
+  font-size: 14px;
+  margin-top: 40px;
+  padding: 0 40px;
+}
+#total .box .le li:nth-child(2) {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+#total .box .le li:nth-child(1) {
+  margin-top: 35px;
+}
+#total .box .le span {
+  display: inline-block;
+  font-size: 20px;
+  color: red;
+  margin: 0 7px;
+}
+#total .box .ri {
+  float: right;
+}
+#total .box .ri span {
+  font-size: 14px;
+  margin-top: 40px;
+  display: inline-block;
+  color: white;
+}
+#total .box .ri span i {
+  display: inline-block;
+  font-size: 20px;
+  color: red;
+  margin: 0 7px;
+}
+#total .box .ri button {
+  width: 200px;
+  height: 40px;
+  background: red;
+  color: white;
+  border: none;
+  outline: none;
+  margin: 30px 0 0 66px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=cart.css.map */
