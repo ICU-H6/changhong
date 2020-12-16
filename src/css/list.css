@@ -172,26 +172,39 @@ li {
   float: left;
   width: 239px;
 }
-#header .nav .list {
+#header .nav .listnav {
   float: left;
   background: white;
   padding-left: 20px;
 }
-#header .nav .list > li {
-  float: left;
-}
-#header .nav .list > li:nth-child(1) a {
-  color: #ff6700;
-}
-#header .nav .list > li a {
+#header .nav .listnav span a {
   width: 90px;
   height: 78px;
+  display: block;
+  line-height: 78px;
+  text-align: center;
+  color: red;
+  float: left;
+}
+#header .nav .listnav > li {
+  float: left;
+}
+#header .nav .listnav > li:nth-child(1) a {
+  color: #ff6700;
+}
+#header .nav .listnav > li a {
+  width: 90px;
   display: inline-block;
   line-height: 78px;
   text-align: center;
   color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
-#header .nav .list > li a:hover {
+#header .nav .listnav > li a:hover {
   color: #ff6700;
 }
 #header .nav .search {
@@ -207,6 +220,59 @@ li {
   border: none;
   outline: none;
   margin-left: 5px;
+}
+#header .nav .search:hover {
+  border: 1px solid red;
+}
+#header > #box {
+  position: absolute;
+  width: 100%;
+  height: 256px;
+  background: white;
+  top: 113px;
+  left: 0;
+  z-index: 10;
+  border-top: 1px solid #bbb;
+  border-bottom: 2px solid #bbb;
+  display: none;
+}
+#header > #box .ol {
+  width: 1226px;
+  height: 100%;
+  margin-left: -600px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+#header > #box .ol > p {
+  width: 114px;
+  line-height: 260px;
+  font-size: 22px;
+  color: black;
+  float: left;
+}
+#header > #box .ol > li a {
+  display: block;
+  width: 244px;
+  height: 100%;
+  float: left;
+  padding: 20px 0;
+  text-align: center;
+}
+#header > #box .ol > li a img {
+  width: 150px;
+  height: 150px;
+  padding: 0 42px;
+  border-right: 1px solid #ccc;
+}
+#header > #box .ol > li a p {
+  margin-top: 16px;
+  color: black;
+}
+#header > #box .ol > li a span {
+  display: block;
+  color: red;
+  margin-top: 6px;
 }
 
 * {
@@ -230,7 +296,7 @@ i {
 #footer .con {
   width: 1226px;
   margin: 0 auto;
-  height: 340px;
+  height: 370px;
 }
 #footer .con > .top {
   padding: 37px 25px 0px;
@@ -353,7 +419,7 @@ i {
 }
 #footer .footer-bot div li {
   float: left;
-  margin-left: 102px;
+  margin-left: 88px;
 }
 #footer .footer-bot div li img {
   width: 26px;
@@ -383,7 +449,7 @@ li {
 
 #main {
   width: 1226px;
-  height: 870px;
+  display: flow-root;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -403,20 +469,20 @@ li {
 }
 #main .right {
   width: 986px;
-  height: 900px;
+  display: flow-root;
   float: left;
   margin-left: 40px;
 }
-#main .right .nav {
+#main .right #nav {
   width: 100%;
   height: 48px;
   background: #f1f1f1;
 }
-#main .right .nav .top {
+#main .right #nav .top {
   float: left;
   width: 1000px;
 }
-#main .right .nav .top > li {
+#main .right #nav .top > li {
   width: 109px;
   height: 45px;
   text-align: center;
@@ -425,17 +491,17 @@ li {
   border-right: 1px solid #e6e6e6;
   cursor: pointer;
 }
-#main .right .nav .top > li:hover {
+#main .right #nav .top > li:hover {
   color: red;
 }
-#main .right .nav .top > input {
+#main .right #nav .top > input {
   width: 16px;
   height: 16px;
   margin-top: 14px;
   margin-left: 10px;
   float: left;
 }
-#main .right .nav .top p {
+#main .right #nav .top p {
   margin-left: 24px;
   font-size: 14px;
   color: #595959;
@@ -443,10 +509,10 @@ li {
   float: left;
   cursor: pointer;
 }
-#main .right .nav .top p:hover {
+#main .right #nav .top p:hover {
   color: red;
 }
-#main .right .nav .top .box {
+#main .right #nav .top .box {
   float: right;
   width: 248px;
   height: 33px;
@@ -455,15 +521,15 @@ li {
   background: white;
   border: 1px solid #ccc;
 }
-#main .right .nav .top .box input {
+#main .right #nav .top .box input {
   width: 207px;
   height: 33px;
   padding-left: 10px;
 }
-#main .right .nav .top .box:hover {
+#main .right #nav .top .box:hover {
   border: 1px solid red;
 }
-#main .right .nav ul > li {
+#main .right #nav ul > li {
   float: left;
   width: 236px;
   height: 360px;
@@ -471,55 +537,61 @@ li {
   margin-right: 14px;
   background: white;
 }
-#main .right .nav ul > li:hover {
+#main .right #nav ul > li:hover {
   box-shadow: 0px 0px 5px 3px #e9e9e9;
 }
-#main .right .nav ul > li:nth-child(4n) {
+#main .right #nav ul > li:nth-child(4n) {
   margin-right: 0;
 }
-#main .right .nav ul > li a {
+#main .right #nav ul > li a {
   display: block;
 }
-#main .right .nav ul > li a .img {
+#main .right #nav ul > li a .img {
   width: 190px;
   height: 190px;
   margin: 15px 25px;
 }
-#main .right .nav ul > li a .img img {
+#main .right #nav ul > li a .img img {
   width: 100%;
   height: 100%;
 }
-#main .right .nav ul > li a .title {
+#main .right #nav ul > li a .title {
   width: 190px;
   height: 86px;
   margin: 0 25px;
 }
-#main .right .nav ul > li a .title h2 {
+#main .right #nav ul > li a .title h2 {
   font-size: 16px;
   font-weight: normal;
   color: black;
   cursor: pointer;
+  width: 190px;
+  height: 21px;
+  overflow: hidden;
 }
-#main .right .nav ul > li a .title > p {
+#main .right #nav ul > li a .title > p {
   font-size: 12px;
   margin-top: 10px;
   color: #666;
+  width: 190px;
+  height: 20px;
+  overflow: hidden;
 }
-#main .right .nav ul > li a .title > p span {
+#main .right #nav ul > li a .title > p span {
   color: red;
   display: inline-block;
   font-size: 16px;
 }
-#main .right .nav ul > li a .title > p i {
+#main .right #nav ul > li a .title > p i {
   float: right;
 }
-#main .right .nav ul > li a .bot {
+#main .right #nav ul > li a .bot {
   width: 213px;
   height: 30px;
   margin: 2px 13px;
   border: 1px solid #ccc;
 }
-#main .right .nav ul > li a .bot div {
+#main .right #nav ul > li a .bot div {
   border-right: 1px solid #ebebeb;
   width: 58px;
   float: left;
@@ -529,21 +601,21 @@ li {
   justify-content: center;
   align-items: center;
 }
-#main .right .nav ul > li a .bot div > p {
+#main .right #nav ul > li a .bot div > p {
   font-size: 12px;
   color: black;
   margin-left: 5px;
 }
-#main .right .nav ul > li a .bot div:nth-child(3) {
+#main .right #nav ul > li a .bot div:nth-child(3) {
   border-right: 0;
   width: 94px;
   cursor: pointer;
 }
-#main .right .nav ul > li a .bot div:nth-child(3):hover p {
+#main .right #nav ul > li a .bot div:nth-child(3):hover p {
   color: red;
 }
 #main #sorter {
-  width: 999px;
+  width: 970px;
   height: 58px;
   background: white;
   margin: 0 auto;

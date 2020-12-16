@@ -172,26 +172,39 @@ li {
   float: left;
   width: 239px;
 }
-#header .nav .list {
+#header .nav .listnav {
   float: left;
   background: white;
   padding-left: 20px;
 }
-#header .nav .list > li {
-  float: left;
-}
-#header .nav .list > li:nth-child(1) a {
-  color: #ff6700;
-}
-#header .nav .list > li a {
+#header .nav .listnav span a {
   width: 90px;
   height: 78px;
+  display: block;
+  line-height: 78px;
+  text-align: center;
+  color: red;
+  float: left;
+}
+#header .nav .listnav > li {
+  float: left;
+}
+#header .nav .listnav > li:nth-child(1) a {
+  color: #ff6700;
+}
+#header .nav .listnav > li a {
+  width: 90px;
   display: inline-block;
   line-height: 78px;
   text-align: center;
   color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
-#header .nav .list > li a:hover {
+#header .nav .listnav > li a:hover {
   color: #ff6700;
 }
 #header .nav .search {
@@ -207,6 +220,59 @@ li {
   border: none;
   outline: none;
   margin-left: 5px;
+}
+#header .nav .search:hover {
+  border: 1px solid red;
+}
+#header > #box {
+  position: absolute;
+  width: 100%;
+  height: 256px;
+  background: white;
+  top: 113px;
+  left: 0;
+  z-index: 10;
+  border-top: 1px solid #bbb;
+  border-bottom: 2px solid #bbb;
+  display: none;
+}
+#header > #box .ol {
+  width: 1226px;
+  height: 100%;
+  margin-left: -600px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+#header > #box .ol > p {
+  width: 114px;
+  line-height: 260px;
+  font-size: 22px;
+  color: black;
+  float: left;
+}
+#header > #box .ol > li a {
+  display: block;
+  width: 244px;
+  height: 100%;
+  float: left;
+  padding: 20px 0;
+  text-align: center;
+}
+#header > #box .ol > li a img {
+  width: 150px;
+  height: 150px;
+  padding: 0 42px;
+  border-right: 1px solid #ccc;
+}
+#header > #box .ol > li a p {
+  margin-top: 16px;
+  color: black;
+}
+#header > #box .ol > li a span {
+  display: block;
+  color: red;
+  margin-top: 6px;
 }
 
 * {
@@ -227,62 +293,129 @@ body {
 #banner .banner-ul {
   width: 1920px;
   height: 500px;
-  overflow: hidden;
   position: relative;
 }
-#banner .banner-ul img {
+#banner .banner-ul li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+#banner .banner-ul li img {
   width: 100%;
   height: 100%;
 }
-#banner .banner-ul .qh {
+#banner .qh {
   position: absolute;
   bottom: 30px;
   right: 300px;
 }
-#banner .banner-ul .qh a {
-  display: block;
+#banner .qh > li {
   float: left;
-  height: 8px;
-  width: 8px;
-  background: url(../img/dian.png) no-repeat left center;
+  height: 12px;
+  width: 12px;
+  background: white;
+  border-radius: 50%;
   margin-left: 17px;
-  border-radius: 4px;
   overflow: hidden;
+  cursor: pointer;
+  z-index: 10;
 }
-#banner > .list {
+#banner .qh .active {
+  background: #ff6700;
+}
+#banner #right,
+#banner #left {
+  font-size: 100px;
+  color: white;
+  font-family: verdana;
   position: absolute;
-  top: 0;
-  left: 340px;
+  text-decoration: none;
+  top: 180px;
+  display: none;
 }
-#banner > .list > li {
+#banner #left {
+  left: 0;
+}
+#banner #right {
+  right: 0;
+}
+#banner #right:hover,
+#banner #left:hover {
+  color: #ff6700;
+}
+#banner > #list {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  margin-left: -613px;
+}
+#banner > #list > li {
   width: 226px;
   height: 62px;
   background: rgba(0, 0, 0, 0.3);
   cursor: pointer;
   padding-left: 30px;
 }
-#banner > .list > li > img {
+#banner > #list > li > img {
   float: left;
   width: 57px;
   height: 100%;
   margin-right: 5px;
 }
-#banner > .list > li > a {
+#banner > #list > li > a {
   text-align: center;
   line-height: 60px;
   color: white;
 }
-#banner > .list > li:hover {
+#banner > #list > li:hover {
   background: #ff6700;
 }
-#banner .list-hover {
+#banner #ol .list-hover {
   display: none;
   position: absolute;
   top: 0;
-  left: 606px;
+  left: 603px;
   width: 446px;
   height: 500px;
   background: white;
+  padding: 0 0 0 40px;
+}
+#banner #ol .list-hover div {
+  width: 400px;
+}
+#banner #ol .list-hover div article {
+  height: 70px;
+  margin-top: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+#banner #ol .list-hover div article img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+#banner #ol .list-hover div article a {
+  float: left;
+  color: black;
+  margin-top: 20px;
+}
+#banner #ol .list-hover div article a:hover {
+  color: red;
+}
+#banner #ol .list-hover div section {
+  padding-top: 8px;
+}
+#banner #ol .list-hover div section a {
+  font-size: 14px;
+  color: #666666;
+  padding: 0px 15px;
+  border-left: 1px solid #e0e0e0;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+#banner #ol .list-hover div section a:hover {
+  color: red;
 }
 
 i,
@@ -448,19 +581,19 @@ a {
   width: 226px;
   height: 630px;
 }
-#tv .bot .con-img li,
-#kt .bot .con-img li,
-#bingx .bot .con-img li,
-#life .bot .con-img li,
-#circum .bot .con-img li {
+#tv .bot .con-img > li,
+#kt .bot .con-img > li,
+#bingx .bot .con-img > li,
+#life .bot .con-img > li,
+#circum .bot .con-img > li {
   float: left;
   transition: 0.5s;
 }
-#tv .bot .con-img li a,
-#kt .bot .con-img li a,
-#bingx .bot .con-img li a,
-#life .bot .con-img li a,
-#circum .bot .con-img li a {
+#tv .bot .con-img > li a,
+#kt .bot .con-img > li a,
+#bingx .bot .con-img > li a,
+#life .bot .con-img > li a,
+#circum .bot .con-img > li a {
   display: inline-block;
   width: 190px;
   height: 260px;
@@ -470,35 +603,38 @@ a {
   text-align: center;
   background: white;
 }
-#tv .bot .con-img li a img,
-#kt .bot .con-img li a img,
-#bingx .bot .con-img li a img,
-#life .bot .con-img li a img,
-#circum .bot .con-img li a img {
-  width: 160px;
-  height: 160px;
+#tv .bot .con-img > li a img,
+#kt .bot .con-img > li a img,
+#bingx .bot .con-img > li a img,
+#life .bot .con-img > li a img,
+#circum .bot .con-img > li a img {
+  width: 190px;
+  height: 190px;
 }
-#tv .bot .con-img li a p,
-#kt .bot .con-img li a p,
-#bingx .bot .con-img li a p,
-#life .bot .con-img li a p,
-#circum .bot .con-img li a p {
+#tv .bot .con-img > li a p,
+#kt .bot .con-img > li a p,
+#bingx .bot .con-img > li a p,
+#life .bot .con-img > li a p,
+#circum .bot .con-img > li a p {
   margin-top: 10px;
   color: black;
+  width: 190px;
+  height: 20px;
+  overflow: hidden;
 }
-#tv .bot .con-img li a p:nth-child(3),
-#kt .bot .con-img li a p:nth-child(3),
-#bingx .bot .con-img li a p:nth-child(3),
-#life .bot .con-img li a p:nth-child(3),
-#circum .bot .con-img li a p:nth-child(3) {
+#tv .bot .con-img > li a p:nth-child(3),
+#kt .bot .con-img > li a p:nth-child(3),
+#bingx .bot .con-img > li a p:nth-child(3),
+#life .bot .con-img > li a p:nth-child(3),
+#circum .bot .con-img > li a p:nth-child(3) {
   color: #999;
   font-size: 12px;
 }
-#tv .bot .con-img li a p:nth-child(4),
-#kt .bot .con-img li a p:nth-child(4),
-#bingx .bot .con-img li a p:nth-child(4),
-#life .bot .con-img li a p:nth-child(4),
-#circum .bot .con-img li a p:nth-child(4) {
+#tv .bot .con-img > li a p:nth-child(4),
+#kt .bot .con-img > li a p:nth-child(4),
+#bingx .bot .con-img > li a p:nth-child(4),
+#life .bot .con-img > li a p:nth-child(4),
+#circum .bot .con-img > li a p:nth-child(4) {
   color: red;
 }
 #tv .bot .con-img li:hover,
@@ -521,18 +657,34 @@ a {
   background: salmon;
 }
 
-#article-le {
+#loutinav {
   position: fixed;
-  top: 25%;
-  left: 476px;
+  top: 40%;
+  left: 50%;
+  margin-left: -670px;
+  margin-top: -150px;
+  display: none;
+  cursor: pointer;
 }
-#article-le li {
+#loutinav .active {
+  background-color: red;
+}
+#loutinav .active a {
+  color: white;
+}
+#loutinav li {
   width: 45px;
   height: 40px;
   line-height: 40px;
   text-align: center;
 }
-#article-le a {
+#loutinav li:hover {
+  background-color: red;
+}
+#loutinav li:hover a {
+  color: white;
+}
+#loutinav a {
   display: block;
   font-size: 14px;
   color: #666;
@@ -543,6 +695,10 @@ a {
   position: fixed;
   bottom: 20%;
   right: 0;
+  cursor: pointer;
+}
+#article-ri .jiantou {
+  display: none;
 }
 #article-ri img {
   width: 40px;
@@ -570,7 +726,7 @@ i {
 #footer .con {
   width: 1226px;
   margin: 0 auto;
-  height: 340px;
+  height: 370px;
 }
 #footer .con > .top {
   padding: 37px 25px 0px;
@@ -693,7 +849,7 @@ i {
 }
 #footer .footer-bot div li {
   float: left;
-  margin-left: 102px;
+  margin-left: 88px;
 }
 #footer .footer-bot div li img {
   width: 26px;

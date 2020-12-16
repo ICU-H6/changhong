@@ -195,11 +195,22 @@ li {
             float: left;
             width: 239px;
         }
-        // list
-        .list {
+        // listnav
+        .listnav {
             float: left;
             background: white;
             padding-left: 20px;
+            span {
+                a {
+                    width: 90px;
+                    height: 78px;
+                    display: block;
+                    line-height: 78px;
+                    text-align: center;
+                    color: red;
+                    float: left;
+                }
+            }
             >li {
                 float: left;
                 &:nth-child(1) a {
@@ -207,11 +218,16 @@ li {
                 }
                 a {
                     width: 90px;
-                    height: 78px;
+                    // height: 78px;
                     display: inline-block;
                     line-height: 78px;
                     text-align: center;
                     color: black;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 1;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
                     &:hover {
                         color: $color;
                     }
@@ -231,6 +247,62 @@ li {
                 border: none;
                 outline: none;
                 margin-left: 5px;
+            }
+            &:hover {
+                @include border(1px, solid, red)
+            }
+        }
+    }
+    // 二级下拉效果
+    >#box {
+        position: absolute;
+        width: 100%;
+        height: 256px;
+        background: white;
+        top: 113px;
+        left: 0;
+        z-index: 10;
+        border-top: 1px solid #bbb;
+        border-bottom: 2px solid #bbb;
+        display: none;
+        .ol {
+            width: 1226px;
+            height: 100%;
+            margin-left: -600px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            >p {
+                width: 114px;
+                line-height: 260px;
+                font-size: 22px;
+                color: black;
+                float: left;
+            }
+            >li {
+                a {
+                    display: block;
+                    width: 244px;
+                    height: 100%;
+                    float: left;
+                    padding: 20px 0;
+                    text-align: center;
+                    img {
+                        width: 150px;
+                        height: 150px;
+                        padding: 0 42px;
+                        border-right: 1px solid #ccc;
+                    }
+                    p {
+                        margin-top: 16px;
+                        color: black;
+                    }
+                    span {
+                        display: block;
+                        color: red;
+                        margin-top: 6px;
+                    }
+                }
             }
         }
     }

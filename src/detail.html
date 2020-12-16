@@ -7,6 +7,7 @@
     <title>详情页</title>
     <link rel="stylesheet" href="./css/detail.css">
     <link rel="stylesheet" href="./fonts/font_2253693_d0ulhqvynuq/iconfont.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js" defer async=true data-main="script/main.js" id="currentpage" data-origin="detail_module"></script>
 </head>
 
 <body>
@@ -78,9 +79,9 @@
         <!-- nav -->
         <div class="nav">
             <img src="./img/logo.png" alt="">
-            <ul class="list">
+            <ul class="listnav">
                 <li>
-                    <a href="#">首页</a>
+                    <a href="./index1.html">首页</a>
                 </li>
                 <li>
                     <a href="#">电视</a>
@@ -115,44 +116,41 @@
     <!-- 内容 -->
     <div id="content">
         <div class="bimg">
-            <img src="https://images.changhong.com/chgw/cpzx/shjd/life_electric/dnq/202012/W020201202613697432624.jpg" alt="">
+            <img src="" alt="" id="img">
+            <!-- 小放大镜 -->
+            <div id="sf"></div>
         </div>
         <!-- 放大镜 -->
-        <div class="fd"></div>
+        <div id="bf">
+            <img src="" alt="" id="bpic">
+        </div>
         <!-- 详情 -->
         <div class="detail">
-            <p>爱神的箭阿三肯德基</p>
-            <span>￥</span>
+            <p class="title"></p>
+
+            <b>￥</b><span class="price"></span>
             <!-- 数量 -->
             <div class="amount">
                 <b>商品数量 :</b>
                 <i>-</i>
-                <input type="text" value="1">
+                <input type="text" value="1" id="quantity">
                 <i>+</i>
             </div>
             <!--  立即购买-->
-            <a href="#" class="buy">立即购买</a>
+            <a href="./cart.html" class="buy">立即购买</a>
             <!-- 加入车 -->
-            <a href="#" class="shop">加入购物车</a>
+            <a class="shop">加入购物车</a>
             <em>手机查看
                 <div><img src="https://images.changhong.com/chgw/gwsy/dblj/ewm/201609/W020200720505010301790.jpg" alt=""></div>
             </em>
         </div>
         <!-- 小图 -->
-        <article class="simg">
-            <a href="#">
-                <img src="./img/zuo.jpg" alt="">
-            </a>
-            <ul>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-            </ul>
-            <a href="#">
-                <img src="./img/you.jpg" alt=""></a>
-        </article>
+        <a href="javascript:;" id="left">
+            <</a>
+                <article class="simg">
+                    <ul></ul>
+                </article>
+                <a href="javascript:;" id="right">></a>
 
     </div>
 

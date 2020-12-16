@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>列表页</title>
     <link rel="stylesheet" href="./css/list.css">
+    <link rel="stylesheet" href="./css/pagination.css">
     <link rel="stylesheet" href="./fonts/font_2253693_d0ulhqvynuq/iconfont.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js" defer async=true data-main="script/main.js" id="currentpage" data-origin="list_module"></script>
 </head>
 
 <body>
@@ -78,9 +80,9 @@
         <!-- nav -->
         <div class="nav">
             <img src="./img/logo.png" alt="">
-            <ul class="list">
+            <ul class="listnav">
                 <li>
-                    <a href="#">首页</a>
+                    <a href="./index1.html">首页</a>
                 </li>
                 <li>
                     <a href="#">电视</a>
@@ -121,11 +123,11 @@
         </div>
         <div class="right">
             <!-- nav -->
-            <div class="nav">
+            <div id="nav">
                 <div class="top">
-                    <li>销量</li>
-                    <li>价格</li>
-                    <li>评价</li>
+                    <li class="button">销量</li>
+                    <li class="button">价格↑</li>
+                    <li class="button">价格↓</li>
                     <li>新品</li>
                     <li>促销</li>
                     <input type="radio" value="仅显示有货">
@@ -136,276 +138,16 @@
                         <span class="iconfont icon-search"></span>
                     </div>
                 </div>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <div class="img">
-                                <img src=""></img>
-                            </div>
-                            <div class="title">
-                                <h2></h2>
-                                <p></p>
-                                <p>
-                                    <span>￥</span>
-                                    <i>0人评论</i>
-                                </p>
-                            </div>
-                            <div class="bot">
-                                <!-- 对比 -->
-                                <div>
-                                    <input type="checkbox" checkbox>
-                                    <p>对比</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-starts-icon_11.jpg" alt="">
-                                    <p>收藏</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-cars-icon_13.jpg" alt="">
-                                    <p>加入购物车</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img">
-                                <img src=""></img>
-                            </div>
-                            <div class="title">
-                                <h2></h2>
-                                <p></p>
-                                <p>
-                                    <span>￥</span>
-                                    <i>0人评论</i>
-                                </p>
-                            </div>
-                            <div class="bot">
-                                <!-- 对比 -->
-                                <div>
-                                    <input type="checkbox" checkbox>
-                                    <p>对比</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-starts-icon_11.jpg" alt="">
-                                    <p>收藏</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-cars-icon_13.jpg" alt="">
-                                    <p>加入购物车</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img">
-                                <img src=""></img>
-                            </div>
-                            <div class="title">
-                                <h2></h2>
-                                <p></p>
-                                <p>
-                                    <span>￥</span>
-                                    <i>0人评论</i>
-                                </p>
-                            </div>
-                            <div class="bot">
-                                <!-- 对比 -->
-                                <div>
-                                    <input type="checkbox" checkbox>
-                                    <p>对比</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-starts-icon_11.jpg" alt="">
-                                    <p>收藏</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-cars-icon_13.jpg" alt="">
-                                    <p>加入购物车</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img">
-                                <img src=""></img>
-                            </div>
-                            <div class="title">
-                                <h2></h2>
-                                <p></p>
-                                <p>
-                                    <span>￥</span>
-                                    <i>0人评论</i>
-                                </p>
-                            </div>
-                            <div class="bot">
-                                <!-- 对比 -->
-                                <div>
-                                    <input type="checkbox" checkbox>
-                                    <p>对比</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-starts-icon_11.jpg" alt="">
-                                    <p>收藏</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-cars-icon_13.jpg" alt="">
-                                    <p>加入购物车</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img">
-                                <img src=""></img>
-                            </div>
-                            <div class="title">
-                                <h2></h2>
-                                <p></p>
-                                <p>
-                                    <span>￥</span>
-                                    <i>0人评论</i>
-                                </p>
-                            </div>
-                            <div class="bot">
-                                <!-- 对比 -->
-                                <div>
-                                    <input type="checkbox" checkbox>
-                                    <p>对比</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-starts-icon_11.jpg" alt="">
-                                    <p>收藏</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-cars-icon_13.jpg" alt="">
-                                    <p>加入购物车</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img">
-                                <img src=""></img>
-                            </div>
-                            <div class="title">
-                                <h2></h2>
-                                <p></p>
-                                <p>
-                                    <span>￥</span>
-                                    <i>0人评论</i>
-                                </p>
-                            </div>
-                            <div class="bot">
-                                <!-- 对比 -->
-                                <div>
-                                    <input type="checkbox" checkbox>
-                                    <p>对比</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-starts-icon_11.jpg" alt="">
-                                    <p>收藏</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-cars-icon_13.jpg" alt="">
-                                    <p>加入购物车</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img">
-                                <img src=""></img>
-                            </div>
-                            <div class="title">
-                                <h2></h2>
-                                <p></p>
-                                <p>
-                                    <span>￥</span>
-                                    <i>0人评论</i>
-                                </p>
-                            </div>
-                            <div class="bot">
-                                <!-- 对比 -->
-                                <div>
-                                    <input type="checkbox" checkbox>
-                                    <p>对比</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-starts-icon_11.jpg" alt="">
-                                    <p>收藏</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-cars-icon_13.jpg" alt="">
-                                    <p>加入购物车</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img">
-                                <img src=""></img>
-                            </div>
-                            <div class="title">
-                                <h2></h2>
-                                <p></p>
-                                <p>
-                                    <span>￥</span>
-                                    <i>0人评论</i>
-                                </p>
-                            </div>
-                            <div class="bot">
-                                <!-- 对比 -->
-                                <div>
-                                    <input type="checkbox" checkbox>
-                                    <p>对比</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-starts-icon_11.jpg" alt="">
-                                    <p>收藏</p>
-                                </div>
-                                <div>
-                                    <img src="https://images.changhong.com/chgw/images/pro-goods-cars-icon_13.jpg" alt="">
-                                    <p>加入购物车</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-
+                <ul></ul>
             </div>
             <!-- 分页器 -->
             <section id="sorter">
-                <div class="content">
-                    <span><a href="./index1.html">首页</a></span>
-
-                    <i class="le"></i>
-                    <ul>
-                        <li>
-                            <a href="">1</a>
-                        </li>
-                        <li>
-                            <a href="">2</a>
-                        </li>
-                        <li>
-                            <a href="">3</a>
-                        </li>
-                        <li>
-                            <a href="">4</a>
-                        </li>
-                    </ul>
-                    <i class="ri"></i>
-                    <span><a href="#">尾页</a></span>
+                <div class="pagelist">
+                    <div class="m-style page">
+                    </div>
                 </div>
             </section>
         </div>
-
     </main>
 
     <!-- 底部 -->

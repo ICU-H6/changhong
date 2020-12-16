@@ -10,12 +10,14 @@ $hei:90px;
     height: 800px;
     margin: 0 auto;
     margin-top: 20px;
+    position: relative;
     .bimg {
         width: 510px;
         height: 510px;
         float: left;
         margin-right: 63px;
         border: 1px solid #ccc;
+        position: relative;
         img {
             width: 510px;
             height: 510px;
@@ -28,9 +30,18 @@ $hei:90px;
         // 标题
         p {
             height: $hei;
+            width: 650px;
+            overflow: hidden;
             line-height: $hei;
             font-size: 18px;
+            font-weight: bold;
             border-bottom: 1px solid#bbb;
+        }
+        b {
+            font-size: 34px;
+            color: red;
+            float: left;
+            line-height: $hei;
         }
         // 价格
         span {
@@ -135,19 +146,24 @@ $hei:90px;
     }
     // 小图切换
     .simg {
-        width: 512px;
-        height: 96px;
+        width: 504px;
+        overflow: hidden;
+        height: 100px;
         float: left;
         margin-top: 10px;
-        ul {
-            float: left;
+        >ul {
+            position: relative;
+            width: 660px;
             margin-top: 12px;
+            float: left;
             li {
                 float: left;
                 list-style: none;
                 width: 84px;
                 height: 84px;
-                margin-right: 10px;
+                margin-left: 11px;
+                border: 2px solid #ccc;
+                cursor: pointer;
                 img {
                     width: 100%;
                     height: 100%;
@@ -155,30 +171,58 @@ $hei:90px;
                 &:last-child {
                     margin-right: 0;
                 }
-            }
-        }
-        a {
-            display: block;
-            float: left;
-            margin-top: 10px;
-            width: 19px;
-            height: 86px;
-            color: #ccc;
-            img {
-                margin-top: 26px;
-                margin-left: 2px;
+                &:hover {
+                    border: 2px solid red;
+                }
             }
         }
     }
     // 放大镜
-    .fd {
-        display: none;
+    #bf {
+        visibility: hidden;
         width: 520px;
         height: 520px;
-        background: aquamarine;
+        border: 1px solid #ccc;
         position: absolute;
-        top: 132px;
-        left: 710px;
+        top: 0;
+        left: 575px;
         z-index: 9;
+        overflow: hidden;
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     }
+}
+
+#sf {
+    width: 50px;
+    height: 50px;
+    background: orange;
+    opacity: 0.3;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+}
+
+// 左右箭头
+#right {
+    color: #ccc;
+    position: absolute;
+    position: absolute;
+    bottom: 200px;
+    left: 510px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#left {
+    color: #ccc;
+    position: absolute;
+    bottom: 200px;
+    left: -35px;
+    font-size: 40px;
+    font-weight: bold;
 }

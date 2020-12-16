@@ -18,7 +18,8 @@ li {
 // 主体内容
 #main {
     width: 1226px;
-    height: 870px;
+    // height: 870px;
+    display: flow-root;
     margin: 0 auto;
     margin-top: 20px;
     // l左边
@@ -39,11 +40,12 @@ li {
     // 右边
     .right {
         width: 986px;
-        height: 900px;
+        // height: 900px;
+        display: flow-root;
         float: left;
         margin-left: 40px;
         // nav
-        .nav {
+        #nav {
             width: 100%;
             height: 48px;
             background: #f1f1f1;
@@ -117,7 +119,6 @@ li {
                     }
                     a {
                         display: block;
-                        // text-align: center;
                         .img {
                             width: 190px;
                             height: 190px;
@@ -137,11 +138,17 @@ li {
                                 font-weight: normal;
                                 color: black;
                                 cursor: pointer;
+                                width: 190px;
+                                height: 21px;
+                                overflow: hidden;
                             }
                             >p {
                                 font-size: 12px;
                                 margin-top: 10px;
                                 color: #666;
+                                width: 190px;
+                                height: 20px;
+                                overflow: hidden;
                                 span {
                                     color: red;
                                     display: inline-block;
@@ -191,7 +198,7 @@ li {
     }
     // 分页器
     #sorter {
-        width: 999px;
+        width: 970px;
         height: 58px;
         background: white;
         margin: 0 auto;

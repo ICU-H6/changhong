@@ -172,26 +172,39 @@ li {
   float: left;
   width: 239px;
 }
-#header .nav .list {
+#header .nav .listnav {
   float: left;
   background: white;
   padding-left: 20px;
 }
-#header .nav .list > li {
-  float: left;
-}
-#header .nav .list > li:nth-child(1) a {
-  color: #ff6700;
-}
-#header .nav .list > li a {
+#header .nav .listnav span a {
   width: 90px;
   height: 78px;
+  display: block;
+  line-height: 78px;
+  text-align: center;
+  color: red;
+  float: left;
+}
+#header .nav .listnav > li {
+  float: left;
+}
+#header .nav .listnav > li:nth-child(1) a {
+  color: #ff6700;
+}
+#header .nav .listnav > li a {
+  width: 90px;
   display: inline-block;
   line-height: 78px;
   text-align: center;
   color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
-#header .nav .list > li a:hover {
+#header .nav .listnav > li a:hover {
   color: #ff6700;
 }
 #header .nav .search {
@@ -208,6 +221,59 @@ li {
   outline: none;
   margin-left: 5px;
 }
+#header .nav .search:hover {
+  border: 1px solid red;
+}
+#header > #box {
+  position: absolute;
+  width: 100%;
+  height: 256px;
+  background: white;
+  top: 113px;
+  left: 0;
+  z-index: 10;
+  border-top: 1px solid #bbb;
+  border-bottom: 2px solid #bbb;
+  display: none;
+}
+#header > #box .ol {
+  width: 1226px;
+  height: 100%;
+  margin-left: -600px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+#header > #box .ol > p {
+  width: 114px;
+  line-height: 260px;
+  font-size: 22px;
+  color: black;
+  float: left;
+}
+#header > #box .ol > li a {
+  display: block;
+  width: 244px;
+  height: 100%;
+  float: left;
+  padding: 20px 0;
+  text-align: center;
+}
+#header > #box .ol > li a img {
+  width: 150px;
+  height: 150px;
+  padding: 0 42px;
+  border-right: 1px solid #ccc;
+}
+#header > #box .ol > li a p {
+  margin-top: 16px;
+  color: black;
+}
+#header > #box .ol > li a span {
+  display: block;
+  color: red;
+  margin-top: 6px;
+}
 
 body {
   background: #fff;
@@ -218,6 +284,7 @@ body {
   height: 800px;
   margin: 0 auto;
   margin-top: 20px;
+  position: relative;
 }
 #content .bimg {
   width: 510px;
@@ -225,6 +292,7 @@ body {
   float: left;
   margin-right: 63px;
   border: 1px solid #ccc;
+  position: relative;
 }
 #content .bimg img {
   width: 510px;
@@ -237,9 +305,18 @@ body {
 }
 #content .detail p {
   height: 90px;
+  width: 650px;
+  overflow: hidden;
   line-height: 90px;
   font-size: 18px;
+  font-weight: bold;
   border-bottom: 1px solid #bbb;
+}
+#content .detail b {
+  font-size: 34px;
+  color: red;
+  float: left;
+  line-height: 90px;
 }
 #content .detail span {
   display: block;
@@ -337,50 +414,82 @@ body {
   display: block;
 }
 #content .simg {
-  width: 512px;
-  height: 96px;
+  width: 504px;
+  overflow: hidden;
+  height: 100px;
   float: left;
   margin-top: 10px;
 }
-#content .simg ul {
-  float: left;
+#content .simg > ul {
+  position: relative;
+  width: 660px;
   margin-top: 12px;
+  float: left;
 }
-#content .simg ul li {
+#content .simg > ul li {
   float: left;
   list-style: none;
   width: 84px;
   height: 84px;
-  margin-right: 10px;
+  margin-left: 11px;
+  border: 2px solid #ccc;
+  cursor: pointer;
 }
-#content .simg ul li img {
+#content .simg > ul li img {
   width: 100%;
   height: 100%;
 }
-#content .simg ul li:last-child {
+#content .simg > ul li:last-child {
   margin-right: 0;
 }
-#content .simg a {
-  display: block;
-  float: left;
-  margin-top: 10px;
-  width: 19px;
-  height: 86px;
-  color: #ccc;
+#content .simg > ul li:hover {
+  border: 2px solid red;
 }
-#content .simg a img {
-  margin-top: 26px;
-  margin-left: 2px;
-}
-#content .fd {
-  display: none;
+#content #bf {
+  visibility: hidden;
   width: 520px;
   height: 520px;
-  background: aquamarine;
+  border: 1px solid #ccc;
   position: absolute;
-  top: 132px;
-  left: 710px;
+  top: 0;
+  left: 575px;
   z-index: 9;
+  overflow: hidden;
+}
+#content #bf img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#sf {
+  width: 50px;
+  height: 50px;
+  background: orange;
+  opacity: 0.3;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  visibility: hidden;
+}
+
+#right {
+  color: #ccc;
+  position: absolute;
+  position: absolute;
+  bottom: 200px;
+  left: 510px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#left {
+  color: #ccc;
+  position: absolute;
+  bottom: 200px;
+  left: -35px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=detail.css.map */
