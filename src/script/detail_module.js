@@ -155,6 +155,9 @@ define(['jcookie'], () => {
                 if ($.cookie('cookiesid') && $.cookie('cookienum')) {
                     arrsid = $.cookie('cookiesid').split(',');
                     arrnum = $.cookie('cookienum').split(',');
+                } else {
+                    arrsid = [];
+                    arrnum = [];
                 }
             }
             //上面的函数获取cookie值，并且转换成数组，方便判断是否是第一次。
@@ -176,6 +179,47 @@ define(['jcookie'], () => {
                     $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
                 }
                 alert('兄台，多买一点！！！');
+            });
+
+
+            //-   +
+            $('.i_ri').on('click', function() {
+
+
+                //parents():获取当前元素的所有的父级(祖先元素)
+                //parent():获取当前元素的父级
+                let $num = $(this).parents('.amount').find('#quantity').val(); //取值
+                console.log($num);
+                $num++; //累加
+                if ($num > 99) { //防止数据过大，Bigint：js新增的数据类型，大整型。
+                    $num = 99;
+                }
+                $(this).parents('.amount').find('#quantity').val($num); //赋值
+            });
+
+            $('.i_le').on('click', function() {
+                let $num = $(this).parents('.amount').find('#quantity').val(); //取值
+                $num--; //累加
+                if ($num <= 0) {
+                    $num = 1;
+                }
+                $(this).parents('.amount').find('#quantity').val($num); //赋值
+            });
+
+            $('#quantity').on('input', function() {
+                let $reg = /^\d+$/;
+                let $value = $(this).val(); //当前的值
+                if (!$reg.test($value)) { //不是数字
+                    $(this).val(1);
+                }
+                if ($value > 99) {
+                    $(this).val(99);
+                }
+
+                if ($value <= 0) {
+                    $(this).val(1);
+                }
+
             });
         }
     }

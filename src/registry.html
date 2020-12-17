@@ -7,6 +7,7 @@
     <title>注册</title>
     <link rel="stylesheet" href="./css/registry.css">
     <link rel="stylesheet" href="./fonts/font_2253693_d0ulhqvynuq/iconfont.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js" defer async=true data-main="script/main.js" id="currentpage" data-origin="registry_module"></script>
 </head>
 
 <body>
@@ -86,21 +87,30 @@
     <div id="box">
         <!-- 内容 -->
         <div class="content">
-            <form action="#">
+            <form action="http://192.168.31.28/changhong/php/reg.php" id="form1" method="post">
+                <div>
+                    <p>用户姓名</p>
+                    <input type="text" placeholder="请输入用户姓名" name="username" id="username">
+                    <span></span>
+                    <i></i>
+                </div>
                 <div>
                     <p>手机号码</p>
-                    <input type="text" placeholder="请输入手机号码">
+                    <input type="text" placeholder="请输入手机号码" name="phone">
                     <span></span>
+                    <i></i>
                 </div>
                 <div>
                     <p>设置密码</p>
-                    <input type="password" placeholder="请输入密码">
-                    <span>长度在8~16之间,必须包含字母数字</span>
+                    <input type="password" placeholder="请输入密码" name="password">
+                    <span></span>
+                    <i></i>
                 </div>
                 <div>
-                    <p>手机号码</p>
-                    <input type="password" placeholder="请输入密码">
+                    <p>确认密码</p>
+                    <input type="password" placeholder="请输入密码" name="password1">
                     <span></span>
+                    <i></i>
                 </div>
                 <article>
                     <input type="checkbox" checked id="checkbox">
@@ -108,7 +118,7 @@
                 </article>
                 <br>
 
-                <button>注册</button>
+                <input type="submit" value="注册" id="submit" name="submit">
                 <a href="./login.html" class="a">已有账号,马上登录</a>
             </form>
         </div>

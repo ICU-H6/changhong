@@ -548,15 +548,22 @@ body {
 #main .liBox .details article i {
   margin-right: 20px;
 }
-#main .liBox .details article em {
+#main .liBox .details article .em_le,
+#main .liBox .details article .em_ri {
+  display: inline-block;
   width: 47px;
   height: 33px;
   text-align: center;
   line-height: 33px;
+  border: none;
+  outline: none;
+  background: white;
   border: 1px solid #ccc;
   cursor: pointer;
 }
-#main .liBox .details article em:hover {
+#main .liBox .details article .em_le:hover,
+#main .liBox .details article .em_ri:hover {
+  color: red;
   border: 1px solid red;
 }
 #main .liBox .details article input {
@@ -664,7 +671,11 @@ body {
   color: red;
   margin: 0 7px;
 }
-#total .box .ri button {
+#total .box .ri #button {
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  line-height: 40px;
   width: 200px;
   height: 40px;
   background: red;

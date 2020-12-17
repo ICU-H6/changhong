@@ -275,6 +275,165 @@ li {
   margin-top: 6px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  font-style: normal;
+}
+
+#footer {
+  width: 100%;
+  background: #efefef;
+  margin-top: 50px;
+}
+#footer .con {
+  width: 1226px;
+  margin: 0 auto;
+  height: 370px;
+}
+#footer .con > .top {
+  padding: 37px 25px 0px;
+  height: 77px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .con > .top > div {
+  float: left;
+  display: flex;
+  width: 182px;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .con > .top > div > div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 11px;
+}
+#footer .con > .top > div > div b {
+  font-size: 17px;
+}
+#footer .con > .top > div > div p {
+  font-size: 14px;
+}
+#footer .con .bot {
+  margin-top: 14px;
+}
+#footer .con .bot .left {
+  float: left;
+  position: relative;
+}
+#footer .con .bot .left div {
+  width: 70px;
+  float: left;
+  margin-left: 40px;
+}
+#footer .con .bot .left div b {
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 18px;
+  font-weight: normal;
+}
+#footer .con .bot .left div a {
+  font-size: 12px;
+  display: block;
+  color: #999;
+  height: 30px;
+  line-height: 30px;
+}
+#footer .con .bot .left div:nth-child(3) {
+  margin-left: 96px;
+}
+#footer .con .bot .left .gang {
+  width: 200px;
+  position: absolute;
+  display: inline-block;
+  border-top: 1px solid #ccc;
+  right: 0;
+  bottom: 14px;
+}
+#footer .con .bot .left > a {
+  position: absolute;
+  bottom: -28px;
+  right: 0;
+  color: #999;
+}
+#footer .con .bot .left a:hover {
+  color: red;
+}
+#footer .con .bot .center {
+  width: 208px;
+  margin-left: 62px;
+  float: left;
+  border-left: 1px solid #ccc;
+  padding-left: 22px;
+  border-right: 1px solid #ccc;
+  padding-left: 40px;
+}
+#footer .con .bot .center .iconfont,
+#footer .con .bot .center i {
+  color: red;
+  margin-left: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+#footer .con .bot .center p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+#footer .con .bot .right {
+  float: left;
+}
+#footer .con .bot .right img {
+  width: 108px;
+  height: 108px;
+  float: left;
+  margin-left: 30px;
+}
+#footer .footer-bot {
+  width: 100%;
+  height: 226px;
+  background: #333333;
+  text-align: center;
+}
+#footer .footer-bot > img {
+  margin: 30px;
+}
+#footer .footer-bot p {
+  color: #999999;
+  margin-bottom: 5px;
+}
+#footer .footer-bot div {
+  width: 1226px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+#footer .footer-bot div li {
+  float: left;
+  margin-left: 88px;
+}
+#footer .footer-bot div li img {
+  width: 26px;
+  height: 31px;
+  float: left;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+#footer .footer-bot div li span {
+  float: left;
+  vertical-align: middle;
+  color: #999999;
+}
+
 body {
   background: #fff;
 }
@@ -342,7 +501,7 @@ body {
 #content .detail .amount input {
   float: left;
   width: 77px;
-  height: 38px;
+  height: 36px;
   text-align: center;
   line-height: 40px;
   border: none;
@@ -351,8 +510,7 @@ body {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
-#content .detail .amount i {
-  font-style: normal;
+#content .detail .amount button {
   display: block;
   float: left;
   width: 38px;
@@ -360,11 +518,14 @@ body {
   line-height: 34px;
   text-align: center;
   background: #fff;
+  border: none;
   border: 1px solid #ccc;
   margin-top: 22px;
   cursor: pointer;
+  outline: none;
 }
-#content .detail .amount i:hover {
+#content .detail .amount button:hover {
+  color: red;
   border: 1px solid red;
 }
 #content .detail a {

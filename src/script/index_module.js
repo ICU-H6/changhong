@@ -203,7 +203,7 @@ define(['jlazyload'], () => {
                 $.each(data, function(index, value) {
                     $strhtml += `
                         <li>
-                            <a href="#">
+                            <a>
                                 <img class="lazy" data-original="${value.url}"/>
                                 <p>${value.title}</p>
                                 <p>${value.details}</p>
@@ -213,6 +213,9 @@ define(['jlazyload'], () => {
                     `;
                 });
                 $list.html($strhtml);
+                // 懒加载
+
+                $("img.lazy").lazyload({ effect: "fadeIn" })
             });
 
 
@@ -228,8 +231,8 @@ define(['jlazyload'], () => {
                 $.each(data, function(index, value) {
                     $strhtml += `
                 <li>
-                <a href="#">
-                        <img src="${value.url}"/>
+                <a>
+                        <img class="lazy" data-original="${value.url}"/>
                         <p>${value.title}</p>
                         <p>${value.details}</p>
                         <p>￥${value.price}</p>
@@ -238,20 +241,10 @@ define(['jlazyload'], () => {
             `;
                 });
                 $list1.html($strhtml);
+                // 懒加载
+
+                $("img.lazy").lazyload({ effect: "fadeIn" })
             });
-
-
-            // 懒加载
-
-            $("img.lazy").lazyload({ effect: "fadeIn" })
-
-
-
-
-
-
-
-
         }
 
     }

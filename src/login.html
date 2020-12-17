@@ -7,6 +7,7 @@
     <title>登录</title>
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./fonts/font_2253693_d0ulhqvynuq/iconfont.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js" defer async=true data-main="script/main.js" id="currentpage" data-origin="login_module"></script>
 </head>
 
 <body>
@@ -16,63 +17,56 @@
         <span>通行证</span>
     </header>
     <main id="main">
-        <!-- 账号手机得box -->
-        <div class="login">
-            <!-- 账号 -->
-            <div class="left">账号密码登录</div>
-            <!-- 手机 -->
-            <div class="right">手机短信登录</div>
-        </div>
-        <!-- 输入框 -->
-        <div class="phone">
-            <span class="iconfont icon-qq"></span>
-            <input type="text" placeholder="手机/邮箱/用户名">
-        </div>
-        <div class="password">
-            <span class="iconfont icon-suo1"></span>
-            <input type="text" placeholder="密码">
-        </div>
-        <!-- 号码输入框 -->
-        <div class="shouji">
-            <span class="iconfont icon-shouji"></span>
-            <input type="text" placeholder="手机号码">
-        </div>
-        <div class="dx">
-            <span class="iconfont icon-xiaoxixinxiduanxintixingyoujiantongzhisixinbeifen"></span>
-            <input type="text" placeholder="短信验证码">
-            <b>获取验证码</b>
-        </div>
-        <button>登录</button>
-        <div class="btn-bot">
-            <a href="./registry.html">注册</a><a href="" style="border-right: none;">忘记密码</a>
-        </div>
-        <!-- 其他方式 -->
-        <div class="else">
-            <span></span> &nbsp; <i>其他方式</i> &nbsp;
-            <span></span>
-        </div>
-        <ul>
-            <li>
-                <a href="#">
-                    <span class="iconfont iconfont1 icon-qq1"></span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="iconfont  iconfont2 icon-3"></span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="iconfont iconfont3 icon-weibo"></span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="iconfont iconfont4 icon-zhifubao"></span>
-                </a>
-            </li>
-        </ul>
+        <form action="" method="post">
+            <!-- 账号手机得box -->
+            <div class="login">
+                <!-- 账号 -->
+                <div class="left">账号密码登录</div>
+                <!-- 手机 -->
+                <div class="right">手机扫码登录</div>
+            </div>
+            <!-- 输入框 -->
+            <div class="phone">
+                <span class="iconfont icon-qq"></span>
+                <input type="text" placeholder="用户名/手机/邮箱" name="username" id="username">
+            </div>
+            <div class="password">
+                <span class="iconfont icon-suo1"></span>
+                <input type="password" placeholder="密码" name="password" id="password">
+            </div>
+            <img src="./img/img.png" alt="" id="img">
+            <input type="button" value="登录" id="login">
+            <div class="btn-bot">
+                <a href="./registry.html">注册</a><a href="" style="border-right: none;">忘记密码</a>
+            </div>
+            <!-- 其他方式 -->
+            <div class="else">
+                <span></span> &nbsp; <i>其他方式</i> &nbsp;
+                <span></span>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="iconfont iconfont1 icon-qq1"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="iconfont  iconfont2 icon-3"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="iconfont iconfont3 icon-weibo"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="iconfont iconfont4 icon-zhifubao"></span>
+                    </a>
+                </li>
+            </ul>
+        </form>
     </main>
 
 </body>

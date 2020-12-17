@@ -86,7 +86,7 @@
     <!-- 购物清单-->
     <main id="main">
         <div class="top">
-            <input type="checkbox" checked>
+            <input type="checkbox" checked="">
             <p>全选<span class="span1">1</span>种商品</p>
         </div>
         <li class="liBox">
@@ -101,9 +101,9 @@
                 <!-- 数量 -->
                 <article>
                     <i>数量</i>
-                    <em>-</em>
-                    <input type="text" value="1">
-                    <em>+</em>
+                    <button class="em_le">-</button>
+                    <input type="text" value="1" checked="">
+                    <button class="em_ri">+</button>
                 </article>
                 <!-- 单凭总价 -->
                 <a class="a">单品总价</a>
@@ -125,7 +125,7 @@
             </div>
             <div class="ri">
                 <span>总计<i>0.00</i>元</span>
-                <button>立即结算</button>
+                <a href="./tiaozhuan.html" id="button">立即结算</a>
             </div>
         </div>
     </section>

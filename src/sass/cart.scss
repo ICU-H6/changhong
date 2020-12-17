@@ -127,14 +127,20 @@ body {
                     margin-right: 20px;
                 }
                 // - +
-                em {
+                .em_le,
+                .em_ri {
+                    display: inline-block;
                     width: 47px;
                     height: 33px;
                     text-align: center;
                     line-height: 33px;
+                    border: none;
+                    outline: none;
+                    background: white;
                     @include border();
                     cursor: pointer;
                     &:hover {
+                        color: red;
                         @include border(1px, solid, red);
                     }
                 }
@@ -249,7 +255,11 @@ body {
                     margin: 0 7px;
                 }
             }
-            button {
+            #button {
+                display: inline-block;
+                text-align: center;
+                font-size: 20px;
+                line-height: 40px;
                 width: 200px;
                 height: 40px;
                 background: red;
